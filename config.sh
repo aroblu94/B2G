@@ -89,6 +89,11 @@ case "$1" in
 	echo LUNCH=full_aoba-eng >> .tmp-config &&
 	repo_sync $1
 	;;
+"c800")
+	echo DEVICE=c800 >> .tmp-config &&
+	echo LUNCH=full_c800-eng >> .tmp-config &&
+	repo_sync $1
+	;;
 "coconut")
 	echo DEVICE=coconut >> .tmp-config &&
 	echo LUNCH=full_coconut-eng >> .tmp-config &&
@@ -97,6 +102,11 @@ case "$1" in
 "e400")
 	echo DEVICE=e400 >> .tmp-config &&
 	echo LUNCH=full_e400-eng >> .tmp-config &&
+	repo_sync $1
+	;;
+"e739")
+	echo DEVICE=e739 >> .tmp-config &&
+	echo LUNCH=full_e739-eng >> .tmp-config &&
 	repo_sync $1
 	;;
 "es209ra")
@@ -154,6 +164,11 @@ case "$1" in
 	echo LUNCH=full_nypon-eng >> .tmp-config &&
 	repo_sync $1
 	;;
+"p700")
+	echo DEVICE=p700 >> .tmp-config &&
+	echo LUNCH=full_p700-eng >> .tmp-config &&
+	repo_sync $1
+	;;
 "pepper")
 	echo DEVICE=pepper >> .tmp-config &&
 	echo LUNCH=full_pepper-eng >> .tmp-config &&
@@ -191,7 +206,10 @@ case "$1" in
 	echo
 	echo Valid devices to configure are:
 	echo +--LG
+	echo - c800
 	echo - e400
+	echo - e739
+	echo - p700
 	echo +--Sony Ericsson
 	echo - anzu
 	echo - coconut
