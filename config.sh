@@ -169,6 +169,11 @@ case "$1" in
 	echo LUNCH=full_p700-eng >> .tmp-config &&
 	repo_sync $1
 	;;
+"p3110")
+	echo DEVICE=p3110 >> .tmp-config &&
+	echo LUNCH=full_p3110-eng >> .tmp-config &&
+	repo_sync $1
+	;;
 "pepper")
 	echo DEVICE=pepper >> .tmp-config &&
 	echo LUNCH=full_pepper-eng >> .tmp-config &&
@@ -233,6 +238,7 @@ case "$1" in
 	echo - pepper
 	echo +--Samsung
 	echo - i9300
+	echo - p3110
 	exit -1
 	;;
 esac
