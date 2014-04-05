@@ -134,6 +134,11 @@ case "$1" in
 	echo LUNCH=full_iyokan-eng >> .tmp-config &&
 	repo_sync $1
 	;;
+"i9000")
+	echo DEVICE=galaxysmtd >> .tmp-config &&
+	echo LUNCH=full_galaxysmtd-eng >> .tmp-config &&
+	repo_sync $1
+	;;
 "i9300")
 	echo DEVICE=i9300 >> .tmp-config &&
 	echo LUNCH=full_i9300-eng >> .tmp-config &&
@@ -144,7 +149,17 @@ case "$1" in
 	echo LUNCH=full_kumquat-eng >> .tmp-config &&
 	repo_sync $1
 	;;
+"kumquat_ste")
+	echo DEVICE=kumquat >> .tmp-config &&
+	echo LUNCH=full_kumquat-eng >> .tmp-config &&
+	repo_sync $1
+	;;
 "lotus")
+	echo DEVICE=lotus >> .tmp-config &&
+	echo LUNCH=full_lotus-eng >> .tmp-config &&
+	repo_sync $1
+	;;
+"lotus_ste")
 	echo DEVICE=lotus >> .tmp-config &&
 	echo LUNCH=full_lotus-eng >> .tmp-config &&
 	repo_sync $1
@@ -164,6 +179,11 @@ case "$1" in
 	echo LUNCH=full_nypon-eng >> .tmp-config &&
 	repo_sync $1
 	;;
+"nypon_ste")
+	echo DEVICE=nypon >> .tmp-config &&
+	echo LUNCH=full_nypon-eng >> .tmp-config &&
+	repo_sync $1
+	;;
 "p700")
 	echo DEVICE=p700 >> .tmp-config &&
 	echo LUNCH=full_p700-eng >> .tmp-config &&
@@ -175,6 +195,11 @@ case "$1" in
 	repo_sync $1
 	;;
 "pepper")
+	echo DEVICE=pepper >> .tmp-config &&
+	echo LUNCH=full_pepper-eng >> .tmp-config &&
+	repo_sync $1
+	;;
+"pepper_ste")
 	echo DEVICE=pepper >> .tmp-config &&
 	echo LUNCH=full_pepper-eng >> .tmp-config &&
 	repo_sync $1
@@ -232,11 +257,16 @@ case "$1" in
 	echo - aoba
 	echo - hikari
 	echo - kumquat
+	echo - kumquat_ste
 	echo - lotus
+	echo - lotus_ste
 	echo - nozomi
 	echo - nypon
+	echo - nypon_ste
 	echo - pepper
+	echo - pepper_ste
 	echo +--Samsung
+	echo - i9000
 	echo - i9300
 	echo - p3110
 	exit -1
